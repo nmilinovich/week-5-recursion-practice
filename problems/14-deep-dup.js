@@ -38,7 +38,7 @@ function deepDup(arr) {
   if (arr.length === 0) return duped;
   arr.forEach(el => {
     if (Array.isArray(el)) {
-    duped.push(...deepDup(el))
+    duped.push(deepDup(el))
     } else {
       duped.push(el);
     }
